@@ -2,6 +2,8 @@
 
 A full-stack application built for the Backend Developer Intern assignment. Features secure authentication, role-based access control (RBAC), and a robust CRUD system for managing posts.
 
+**Live Demo**: [https://post-frontend-seven.vercel.app/](https://post-frontend-seven.vercel.app/)
+
 ## 🚀 Features
 
 ### Backend
