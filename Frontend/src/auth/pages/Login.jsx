@@ -20,8 +20,10 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await handleLogin({ email, password });
-    navigate("/");
+    const success = await handleLogin({ email, password });
+    if (success) {
+      navigate("/");
+    }
   };
 
   if (loading) {
@@ -96,7 +98,7 @@ function Login() {
         <p>Email: test_01@email.com</p>
         <p>Password: testpassword</p>
         <h4>User Credentials</h4>
-        <p>Email: test_user_02</p>
+        <p>Email: test_02@email.com</p>
         <p>Password: testpassword</p>
       </div>
     </div>

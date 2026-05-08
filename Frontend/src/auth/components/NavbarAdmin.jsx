@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useAuth } from "../hooks/useAuth";
+import { API_BASE_URL } from "../../config";
 
 function NavbarAdmin({ onPostCreated }) {
   const { handleLogout } = useAuth();
@@ -17,7 +18,7 @@ function NavbarAdmin({ onPostCreated }) {
   };
 
   const api = axios.create({
-    baseURL: "https://post-backend-293e.onrender.com",
+    baseURL: API_BASE_URL,
     withCredentials: true,
   });
 
