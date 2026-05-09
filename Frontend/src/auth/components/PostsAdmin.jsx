@@ -1,8 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-import { API_BASE_URL } from "../../config";
-
 function PostsAdmin({ refreshKey }) {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -11,7 +9,7 @@ function PostsAdmin({ refreshKey }) {
   const [editDescription, setEditDescription] = useState("");
 
   const api = axios.create({
-    baseURL: API_BASE_URL,
+    baseURL: "https://post-backend-293e.onrender.com",
     withCredentials: true,
   });
 

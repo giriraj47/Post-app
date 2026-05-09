@@ -1,14 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-import { API_BASE_URL } from "../../config";
-
 function Posts() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const api = axios.create({
-    baseURL: API_BASE_URL,
+    baseURL: "https://post-backend-293e.onrender.com",
     withCredentials: true,
   });
 

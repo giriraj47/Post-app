@@ -6,8 +6,8 @@ function Login() {
   const { loading, handleLogin } = useAuth();
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("test_01@email.com");
+  const [password, setPassword] = useState("testpassword");
 
   useEffect(() => {
     const link = document.createElement("link");

@@ -1,19 +1,15 @@
 import axios from "axios";
 
-import { API_BASE_URL } from "../../config";
-
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: "https://post-backend-293e.onrender.com",
   withCredentials: true,
 });
 
 export async function register({ username, email, password }) {
   try {
-    const response = await api.post("/api/v1/auth/register", {
-      username,
-      email,
-      password,
-    });
+    const payload = { username, email, password };
+    console.log("Register payload:", payload);
+    const response = await api.post("/api/v1/auth/register", payload);
 
     return response.data;
   } catch (err) {

@@ -14,13 +14,7 @@ export const useAuth = () => {
       return true;
     } catch (err) {
       console.error("Login failed:", err);
-      const errorMessage =
-        err.response?.data?.errors
-          ?.map((e) => `${e.path}: ${e.message}`)
-          .join("\n") ||
-        err.response?.data?.message ||
-        "Login failed. Please try again.";
-      alert(errorMessage);
+      alert(err.response?.data?.message || "Login failed. Please try again.");
       return false;
     } finally {
       setLoading(false);
@@ -35,13 +29,7 @@ export const useAuth = () => {
       return true;
     } catch (err) {
       console.error("Signup failed:", err);
-      const errorMessage =
-        err.response?.data?.errors
-          ?.map((e) => `${e.path}: ${e.message}`)
-          .join("\n") ||
-        err.response?.data?.message ||
-        "Sign up failed. Please try again.";
-      alert(errorMessage);
+      alert(err.response?.data?.message || "Sign up failed. Please try again.");
       return false;
     } finally {
       setLoading(false);
